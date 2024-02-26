@@ -1,0 +1,115 @@
+@import '../global/global.scss';
+
+.about{
+    height:100vh;
+    background-image:url('../../../public/assests/about.jpg');
+    background-size:100% 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    @include mob{
+      overflow: hidden;
+    }
+
+    .wrapper{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+
+        .aboutMe{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .abouth1{
+            color:#1c1d25;
+            
+            margin-bottom: 1vw;
+            transition: all 1s;
+            @include responsive-font(40);
+        }
+       
+        
+        p{
+            color: #1c1d25;
+            width: 50vw;
+           
+            line-height: 1.2;
+            // font-stretch: expanded;
+            text-align:center;
+           font-size: 1.7vw;
+
+
+            @include ipad{
+              width: 70vw;
+             font-size: 2.5vw;
+
+            }
+            @include mob{
+              width: 300px;
+              // font-size:20px;
+              
+              font-size: 4vw;
+            }
+
+
+        }
+        .cvDiv{
+            overflow: hidden;
+            display: flex;
+        }
+        .cv{
+          color:black;
+          margin-top: 4vw;
+          border: none;
+          padding: 1vw;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          justify-content: center;
+          background-color: lightblue;
+      //    background-color: lightblue;
+       border-radius: 10px;
+          transition: all .7s ease-in-out;
+          font-size:1vw;
+          @include mob{
+            margin-left: 0;  
+            font-size:3vw;
+            padding: 1vw;
+              }
+              @include ipad{
+                font-size:2vw;
+
+              }
+          }
+
+         }
+    }
+}
+
+.p {
+    color: lightblue;
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+.p:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.cv:hover{
+    cursor: pointer;
+    border-radius: 50%;
+    transform: scale(1.2);
+    color: #000;
+}
