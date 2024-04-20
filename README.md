@@ -46,7 +46,7 @@ To Visit App:
 
 ## Screenshot:
 
-![port](https://github.com/faroukemad/portfolio-new-design/assets/124167527/c64e61cf-f242-4d2d-aedd-ef129de3ec4a)
+![portfolio](https://github.com/faroukemad/Portfolio/assets/124167527/c458e6c9-2fed-49ca-a6d3-789a635f4247)
 
 ## Live link:
 
