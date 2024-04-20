@@ -1,0 +1,251 @@
+
+@import '../global/global.scss';
+
+$bg-image: url('../../../public/assests/back5.jpg');
+.menu{
+
+    width: 800px;
+    height: 500px;
+    background-color: lightblue;
+    position: fixed;
+    top:-600px;
+    right: 400px;
+    z-index: 2;
+  
+    transition: all 1.5s ease;
+    background-image: $bg-image;
+    background-size:800px 500px;
+    @include ipad{
+        right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include mob{
+        width: 300px;
+        height: 500px;
+        right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    &.active{
+        
+        top:100px;
+        @include mob{
+          top: 50px;
+          }
+    }
+
+    .close{
+        display: flex;
+        cursor: pointer;
+        float: right;
+        margin: 20px;
+        fill:#0c1241;
+        @include mob{
+          
+            margin: 10px;
+          }
+    }
+    
+    .container{
+       margin-top: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @include mob{
+          margin-top: 0;
+          width: 100%;
+          height: 100%;
+          justify-content: start;
+          }
+
+        .contact{
+            font-size: 30px;
+            font-weight: bold;
+            color: #0c1241;
+            @include mob{
+                font-size: 25px;
+                margin-left: 0;
+              }
+        }
+        .dvs{
+            display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mob{
+            width: 100%;
+            flex-direction: column;
+          }
+        }
+
+        .dv1{
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .image{
+                height: 200px;
+                width: 200px;
+                overflow: hidden;
+                margin-left: 50px;
+                @include mob{
+                   height: 70px;
+                   width: 70px;
+                   margin-left: 0;
+                  }
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+        .dv2{
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-right: 100px;
+            @include mob{
+                margin-right: 0;
+
+            }
+        }
+        .fstName{
+            height: 30px;
+            width: 260px;
+            margin-left: 150px;
+            margin-top: 50px;
+            border-radius: 15px;
+            padding-left: 10px;
+            margin-bottom: 15px;
+            border: none;
+            color:black;
+
+            @include mob{
+                width: 180px;
+                margin-top: 10px;
+                margin-left: 0;
+            }
+        
+        }
+
+        .lstName{
+            height: 30px;
+            width: 260px;
+            margin-left: 150px;
+           border-radius: 15px;
+           margin-bottom: 15px;
+            padding-left: 10px;
+            border: none;
+            color:black;
+            @include mob{
+                width: 180px;
+                margin-left: 0;
+            }
+
+        }
+        
+        .inEmail{
+            height: 30px;
+            width: 260px;
+            margin-left: 150px;
+             border-radius: 15px;
+             margin-bottom: 15px;
+            padding-left: 10px;
+            border: none;
+            color:black;
+            @include mob{
+                width: 180px;
+                margin-left: 0;
+            }
+        }
+       
+        .errorMessage{
+            margin-left: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            color: #0c1241;
+            font-weight: bold;
+        }
+       
+        .txtMessage{
+            height: 50px;
+            width: 250px;
+            margin-left: 150px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: none;
+            resize: none;
+            color: black;
+            @include mob{
+                width: 180px;
+                height: 30px;
+                margin-left: 0;
+            }
+        }
+        .sub{
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px ;
+            height: 40px;
+            width: 260px;
+            border-radius: 10px;
+            margin-left: 150px;
+           background-image: linear-gradient(to left ,   #0c1241   , #202d8b);
+           
+            cursor: pointer;
+            border: none;
+            @include mob{
+                width: 180px;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.loaderx{
+    pointer-events: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border:3px solid transparent;
+    border-top-color:#fff ;
+    animation: an1 1s ease infinite;
+
+}
+@keyframes an1 {
+0%{
+    transform: rotate(0turn);
+}
+    100%{
+        transform: rotate(1turn);
+
+    }
+}
+
+.mess{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+
+}
+
+.btnDis{
+    display: none;
+    
+}
+
